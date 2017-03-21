@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <title>
+        Weather App
+    </title>
+</head>
+
+<body>
+    <div class="container-float">
+
+        <div id="mainview_header">
+            <span class="col_left"><button onclick="openSidebar();" class="btn btn-default btn-lg fa fa-bars"></button></span>
+            <span id="cityName" class="col_middle font_mainview_header"></span>
+            <span class="col_right">
+                    <button class="btn btn-default btn-lg fa fa-location-arrow" onclick="getLocation();"></button>
+                </span>
+        </div>
+        <div id="datepicker">
+            <span class="col_left">
+                    <button id="button_left" class="btn btn-default btn-lg fa fa-chevron-left" onclick="changeDate(currentDay, -1);"></button>
+                </span>
+            <span class="col_middle font_datepicker" id="date_set"></span>
+            <span class="col_right">
+                <button id="button_right" class="btn btn-default btn-lg" onclick="changeDate(currentDay, 1);"><i class="fa fa-chevron-right"></i></button>
+                </span>
+        </div>
+        <div id="mainview_content">
+            <div id="mainview-image">
+                <img src="img/clear-day.png"/>
+            </div>
+            <p id="mainview_summary"></p>
+            <p class="temp" id="mainview_temp"></p>
+        <div>
+            <i class="fa fa-flag fa-lg fa-3x"> </i><span class="wind_hum" id="mainview_wind"></span>
+        </div>
+            <div>
+                <i class="fa fa-tint fa-lg fa-2x"> </i><span id="mainview_humidity"> </span>
+            </div>
+        <div id="detailsview">
+            <div class="details_button">
+                <button onclick="closeDetails();">X</button>
+            </div>
+            <table id="detailsviewTable" class="table">
+
+            </table>
+        </div>
+        <footer>
+            <div class="details_button">
+                <button class="btn btn-default btn-lg" onclick="openDetails();">Details</button>
+            </div>
+        </footer>
+    </div>
+    <div id="sidebar">
+        <div id="close-sidebar-button">
+            <button onclick="closeSidebar();" class=" btn btn-default btn-lg fa fa-times"></button>
+        </div>
+        <div class="header-sidebar font_mainview_header"><i class="fa fa-globe"></i> Cities</div>
+        <div class="sidebar-data">Berlin</div>
+        <div class="sidebar-data">Paris</div>
+        <div class="sidebar-data">
+            <div class="sidebar-input form-group">
+                <input class="input-city" placeholder="New City">
+            </div>
+        </div>
+        <p class="header-sidebar font_mainview_header"><i class="fa fa-cog"></i> Settings</p>
+        <div class="sidebar-data">
+            <span>Temp.</span>
+            <button class="sidebar-button1" onclick="convertFC(); closeSidebar();">°C</button>
+            <button class="sidebar-button2" onclick="convertCF(); closeSidebar();">°F</button>
+        </div>
+        <div class="sidebar-data">
+            <span>Wind</span>
+            <button onclick ="convertMK(); closeSidebar();" class="sidebar-button1">km/h</button>
+            <button class="sidebar-button2" onclick ="convertKM(); closeSidebar();">m/h</button>
+        </div>
+    </div>
+
+    <script src="weather.js"></script>
+    <script src="myJS.js"></script>
+</body>
+
+</html>

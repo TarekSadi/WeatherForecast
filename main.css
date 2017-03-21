@@ -1,0 +1,234 @@
+html,
+body, .container-float {
+    /*Prepare for absolute layout*/
+    height: 100%;
+    background-color: #45B29D;
+}
+
+
+#mainview_header{
+display: block;
+height: 55px;
+padding: 0px;
+width: 100%;
+text-transform: uppercase;
+background-color: black;
+}
+
+#mainview_header button{
+    margin: 5px;
+}
+
+#datepicker button{
+    margin: 5px;
+}
+
+#cityName{
+    padding-top: 6px;
+}
+
+
+#datepicker{
+ height: 55px;
+ width: 100%;
+background-color: rgba(0, 0, 0, 0.2)}
+
+
+#button_right{
+display: block;
+position: absolute;
+right: 0px;
+}
+
+#button_left{
+display: none;
+position: absolute;
+left: 0px;
+}
+
+.col_left{
+display: inline-block;
+position: absolute;
+left: 0px;
+width: 10%;
+padding: 0px;
+text-align: left;
+}
+
+.col_right{
+display: inline-block;
+position: absolute;
+right: 0px;
+width: 10%;
+margin: 0px;
+text-align: right;
+}
+
+.col_middle{
+display: inline-block;
+width: 80%;
+position: absolute;
+left: 10%;
+right: 10%;
+margin: auto;
+text-align: center;
+}
+
+#mainview_content{
+text-align: center;
+position: relative;
+height: 80%;
+margin: 0px;
+padding: 0px;
+}
+
+#mainview-image{
+    padding: 25px;
+}
+
+#mainview_humidity{
+    font-size: 30px;
+    
+}
+
+.font_mainview_header{
+font-family: sans-serif, serif;
+font-size: 30px; 
+color: aliceblue;
+}
+
+.font_datepicker{
+font-family: sans-serif, serif;
+font-size: 30px; 
+color: aliceblue;
+}
+
+
+.temp{
+font-size: 80px; 
+font-family: sans-serif;
+}
+
+#mainview_wind{
+font-family: sans-serif;
+font-size: 40px;
+}
+
+#mainview_summary{
+    font-size: 30px;
+    font-style: italic;
+}
+
+#sidebar{
+position: absolute;
+top: 0px;
+margin: 0px;
+left: -70%;
+padding: 0px;
+height: 100%;
+width: 70%;
+background-color: #333333;
+}
+
+
+#detailsview{
+position: fixed;
+bottom: 0px;
+margin: 0px;
+padding: 0px;
+height: 0%;
+width: 100%;
+background-color: gray;
+-webkit-transition: height 1s;
+transition: height 1s;
+} 
+
+#close-sidebar-button{
+    margin: 5px;
+    top:5px;
+}
+
+.sidebar-data{
+    color: aliceblue;
+    height: 45px;
+    padding: 10px;
+    font-size: 20px;
+    margin-left: 35px;
+    border-bottom: 1px solid grey;
+}
+
+.header-sidebar{
+    margin: 15px;
+}
+
+.input-city{
+    height: 25px;
+    font-size: 15px;
+    width: 100px;
+    color: grey;
+}
+
+.sidebar-button1{
+    color: aliceblue;
+    position: absolute;
+    left: 50%;
+    font-size: 10px;
+    height: 35px;
+    width: 35px;
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.9);
+    border-color: black;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.sidebar-button2{
+    color: aliceblue;
+    position: absolute;
+    left: 70%;
+    font-size: 10px;
+    height: 35px;
+    width: 35px;
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.9);
+    border-color: black;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.row:nth-child(odd){
+background-color: lightskyblue;
+}
+
+.row:nth-child(even){
+background-color: gray;
+}
+
+footer{
+position: fixed;
+width: 100%;
+padding: 0px;
+margin: 0px;
+bottom: 0px;
+border-top: 1px solid #45B29D;
+box-shadow: 10px 0px 5px rgba(35,176,167,0.5);
+background-color: black;
+}
+
+.details_button{
+text-align: center;
+background-color: black;
+bor
+}
+
+#loadScreen{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    opacity: 0.9;
+    
+}
+
